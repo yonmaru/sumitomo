@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* タブレット用CSS */
+
+.hidden-sp {
+	display: inherit !important;
+}
+.hidden-tb {
+	display:none !important;
+}
+.hidden-pc {
+	display: inherit !important;
+}

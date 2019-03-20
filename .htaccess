@@ -1,0 +1,4 @@
+# HTMLでインクルードを許可
+Options +Includes
+AddHandler server-parsed html
+
