@@ -65,13 +65,13 @@ $(function() {
     });
     
     $('#menubtn').click(function(){
-        $('.header_div_wrap').slideToggle(100);
+        $('.header_div_wrap:not(:animated)').slideToggle(100);
         $(this).toggleClass('open');
         return false;
     })
     
     $(document).on('click touchend', function(e) {
-    if (!$(e.target).closest('.header_div_inner').length) {
+    if (!$(e.target).closest('.eventarea').length) {
         $('.header_div_wrap').slideUp(100);
         $('#menubtn').removeClass('open');
     }
