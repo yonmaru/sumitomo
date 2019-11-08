@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/*
+ * ju-override.css
+ * 
+ *   Created on : 2019/05/15, 12:13:20
+ *   Author     : y-oguchi
+ * 
+ * j.union(小口)にて作成しました。
+ * 既存のcssソース(/member/css/sytle.css)のコードに対する追記・書き換えを行っています。
+ * 
+ */
+
+/* ------------------------------------------------------------------------------- main visual */
+.main_visual div.NewsLogList_leftThumbnail{
+    float: none;
+}
+.main_visual .NewsLogList_thumbnail img{
+    border: none;
+}
+.main_visual div.NewsLogList_article,
+.main_visual div.NewsLogList_info,
+.main_visual div.NewsLogList_title{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: inherit;
+}
+.main_visual div.NewsLogList_title{
+    text-align: center;
+}
+.main_visual div.NewsLogList_article{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.main_visual div.NewsLogList_info a{
+    display:inline-block;
+    position: relative;
+    margin-top: 3em;
+    min-width:256px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    background-color: #00BD76;
+    padding:0.5em 3em;
+    margin: 3em auto 0;
+    font-size:2.2rem;
+    transition: all 0.1s linear;
+}
+@media screen and ( max-width:767px ) {
+    .main_visual div.NewsLogList_info a{
+        min-width:80%;
+        padding:0.5em 2em;
+        font-size:1.8rem;
+    }
+}
+.main_visual div.NewsLogList_info a:hover {
+    text-decoration: none;
+    color: #000;
+    background-color: #65DBAF;
+}
+.main_visual div.NewsLogList_info a::after{
+    content:"";
+    display:block;
+    width:10px;
+    height:10px;
+    border-top:2px solid #fff;
+    border-right:2px solid #fff;
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    -webkit-transform: translate(0%, -50%) rotate(45deg);
+    -moz-transform: translate(0%, -50%) rotate(45deg);
+    -ms-transform: translate(0%, -50%) rotate(45deg);
+    -o-transform: translate(0%, -50%) rotate(45deg);
+    transform: translate(0%, -50%) rotate(45deg);
+}
+.main_visual div.NewsLogList_clear{
+    display: none;
+}
+.main_visual .slick-prev,
+.main_visual .slick-next{
+    width: 32px;
+    height: 32px;
+}
+.main_visual .slick-prev{
+    left: -48px;
+    z-index: 1;
+}
+.main_visual .slick-prev:before {
+    content: "";
+    display: block;
+    width:32px;
+    height:32px;
+    border-top:2px solid #1DBC78;
+    border-left:2px solid #1DBC78;
+    color:#333;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.main_visual .slick-next{
+    right: -48px;
+    z-index: 1;
+}
+
+.main_visual .slick-next:before {
+    content: "";
+    display: block;
+    width:32px;
+    height:32px;
+    border-top:2px solid #1DBC78;
+    border-left:2px solid #1DBC78;
+    color:#333;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+.main_visual .slick-dots{
+    bottom: -48px;
+}
+.main_visual .slick-dots li button::before{
+    font-size: 24px;
+}
